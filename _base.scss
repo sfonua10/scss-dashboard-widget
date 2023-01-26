@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+
+body {
+    background-color: $body-color;
+}
+
+nav {
+    background-color: $main-background;
+}
+
+.mainContainer {
+    background-color: $main-background;
+}

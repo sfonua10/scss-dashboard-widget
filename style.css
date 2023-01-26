@@ -18,9 +18,21 @@
     background-color: #EFE6E3;
   }
 }
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 60%;
+  margin: 50px 0 34px 0;
+}
+
 nav {
   height: 100%;
   max-width: 320px;
+  margin-left: 35px;
+  color: #1C1C1E;
 }
 
 .navList {
@@ -38,8 +50,9 @@ nav {
 .navList li {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
-  padding: 8px 80px 8px 8px;
+  padding: 10px 80px 10px 10px;
   margin: 8px;
+  padding-left: 20px;
 }
 .navList li span {
   margin-left: 12px;
@@ -47,6 +60,19 @@ nav {
 .navList :nth-child(5) {
   position: absolute;
   bottom: 8%;
+  display: flex;
+  align-items: center;
+}
+.navList :nth-child(5) i {
+  font-size: 0.8em;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #1C1C1E;
+  color: #FBF7F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subList {
@@ -82,4 +108,8 @@ nav {
 * {
   margin: 0;
   padding: 0;
+}
+
+.navList li:first-of-type {
+  background-color: #EFE6E3;
 }/*# sourceMappingURL=style.css.map */

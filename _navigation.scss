@@ -1,0 +1,72 @@
+@use 'variables' as *;
+
+@mixin nav-theme($font-theme, $text-size) {
+    font-family: $font-theme;
+    font-size: $text-size;
+    padding: 10px 80px 10px 10px;
+    margin: 8px;
+    padding-left: 20px;
+}
+
+@keyframes changeColor {
+    from {background-color: $main-background}
+    to {background-color: #EFE6E3}
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 60%;
+        margin: 50px 0 34px 0;
+    }
+}
+
+nav {
+    height: 100%;
+    max-width: 320px;
+    margin-left: 35px;
+    color: $myfont-color;
+}
+
+.navList {
+    list-style-type: none;
+    span:hover {
+        cursor: pointer;
+    }
+
+    li:hover {
+        animation-name: changeColor;
+        animation-duration: 1s;
+    }
+    li {
+        @include nav-theme($font-theme, $text-size);
+        span {
+            margin-left: 12px;
+        }
+    }
+
+    :nth-child(5) {
+        position: absolute;
+        bottom: 8%;
+        display: flex;
+        align-items: center;
+        i {
+            font-size: .8em;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $myfont-color;
+            color: $main-background;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.subList {
+    display: none;
+}
