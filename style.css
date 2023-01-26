@@ -1,1 +1,85 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Roboto:wght@500&display=swap");
+}
+@-webkit-keyframes changeColor {
+  from {
+    background-color: #FBF7F4;
+  }
+  to {
+    background-color: #EFE6E3;
+  }
+}
+@keyframes changeColor {
+  from {
+    background-color: #FBF7F4;
+  }
+  to {
+    background-color: #EFE6E3;
+  }
+}
+nav {
+  height: 100%;
+  max-width: 320px;
+}
+
+.navList {
+  list-style-type: none;
+}
+.navList span:hover {
+  cursor: pointer;
+}
+.navList li:hover {
+  -webkit-animation-name: changeColor;
+          animation-name: changeColor;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.navList li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  padding: 8px 80px 8px 8px;
+  margin: 8px;
+}
+.navList li span {
+  margin-left: 12px;
+}
+.navList :nth-child(5) {
+  position: absolute;
+  bottom: 8%;
+}
+
+.subList {
+  display: none;
+}
+
+.mainContainer {
+  width: 90%;
+  height: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background-color: #CCC1BE;
+}
+
+nav {
+  background-color: #FBF7F4;
+}
+
+.mainContainer {
+  background-color: #FBF7F4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=style.css.map */
