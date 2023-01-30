@@ -14,55 +14,67 @@
                 <img src="images/logo.png" alt="logo">
             </div>
             <ul class="navList">
-                <li>
+                <li class="dashboard">
                     <div>
                         <i class="fa-sharp fa-solid fa-chart-simple"></i><span>Dashboard</span>
                     </div>
-                    <i class="fa-solid fa-circle-chevron-down"></i>
-                    <ul class="subList">
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                    </ul>
+                    <i class="fa-solid fa-circle-chevron-down" onclick="dashboardMenu()"></i>
                 </li>
+                <div>    
+                    <ul id="dashDrop" class="subList subMenu">
+                        <li><span>Today's Plan</span></li>
+                        <li><span>Weekly Report</span></li>
+                        <li><span>Tasks</span></li>
+                    </ul>
+                </div>
                 <li>
                     <div>
                         <i class="fa-solid fa-shapes"></i><span>Education</span>
                     </div>
-                    <i class="fa-solid fa-circle-chevron-down"></i>
-                    <ul class="subList">
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                    </ul>
+                    <i class="fa-solid fa-circle-chevron-down" onclick="educationMenu()"></i>
                 </li>
-                <li>
+                <div>
+                    <ul id="eduDrop" class="subList subMenu">
+                        <li><span>Canvas</span></li>
+                        <li><span>Pluralsight</span></li>
+                        <li><span>Mtec</span></li>
+                    </ul>
+                </div>
+                <li id="resourceTab">
                     <div>
-                        <i class="fa-solid fa-lines-leaning"></i><span>Resources</span>
+                        <i class="fa-solid fa-lines-leaning"></i><span>Resources</span> 
                     </div>  
-                    <i class="fa-solid fa-circle-chevron-down" onclick="dropMenu()"></i>
-                        <ul id="resourceDrop" class="subList">
-                            <li class="hidden">Genetics 101</li>
-                            <li class="hidden">DNA synthesis</li>
-                            <li class="hidden">Events</li>
-                        </ul>
-                </li>    
+                    <i class="fa-solid fa-circle-chevron-down" onclick="resourceMenu()"></i>
+                </li>
+                <div>
+                    <ul id="resourceDrop" class="subList subMenu">
+                        <li><span>Genetics 101</span></li>
+                        <li><span>DNA synthesis</span></li>
+                        <li><span>Events</span></li>
+                    </ul>
+                </div>     
                 <li>
                     <div>
                         <i class="fa-solid fa-gear"></i><span>Settings</span>
                     </div>
-                    <i class="fa-solid fa-circle-chevron-down"></i>    
-                    <ul class="subList">
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                    </ul>
+                    <i class="fa-solid fa-circle-chevron-down" onclick="settingsMenu()"></i>
                 </li> 
+                <div>    
+                    <ul id="settingsDrop" class="subList subMenu">
+                        <li><span>Profile</span></li>
+                        <li><span>Appearance</span></li>
+                        <li><span>Privacy</span></li>
+                    </ul>
+                </div>
                 <li><i class="fa-solid fa-right-from-bracket"></i><span>Log out</span>
             </ul>
         </nav>
     </div>    
     <script src="https://kit.fontawesome.com/8d9517372c.js" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
+  crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

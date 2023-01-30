@@ -27,28 +27,20 @@
 
 nav {
     height: 100%;
+    min-height: 800px;
     width: 250px;
     max-width: 350px;
     margin-left: 35px;
     color: $myfont-color;
     font-family: $font-theme;
+    font-weight: bold;
 }
 
 .navList {
-    list-style-type: none;
-    // span:hover {
-    //     cursor: pointer;
-    // }
-
-    li:hover {
-        background-color: #EFE6E3;
-        transition: .3s;
-
-        .fa-circle-chevron-down {
-            display: block;
-            cursor: pointer;
-        }
+    ul {
+        list-style-type: none;
     }
+    
     li {
         display: flex;
         justify-content: space-between;
@@ -61,11 +53,24 @@ nav {
         .fa-circle-chevron-down {
            display: none;   
         }
+
+        span:hover {
+            cursor: pointer;
+        }
     }
 
-    :nth-child(5) {
+    li:hover {
+        background-color: $highlight-color;
+        transition: .3s;
+        .fa-circle-chevron-down {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    :nth-child(9) {
         position: absolute;
-        bottom: 8%;
+        top: 810px;
         display: flex;
         align-items: center;
         i {
@@ -79,29 +84,61 @@ nav {
             justify-content: center;
             align-items: center;
         }
+        :hover {
+            cursor: pointer;
+        }
     }
 
 }
 
-#resourceDrop {
-    li{
+.subMenu {
+    
+    li {
     background-color: $main-background;
     margin-left: 40px;
     display: list-item;
-    list-style: square; 
+    list-style: square inside; 
+
+        span {
+            font-size: .5em;
+            color: $myfont-color;
+            position: relative;
+            top: -5px;
+            left: -25px; 
+        }
+
     }
 
-    li::before {
+    li:nth-of-type(1) {
     font-size: 2em;
-    color: #8a7f3f; 
+    color: $bullet-color-one; 
     }
 
+    li:nth-of-type(2) {
+        font-size: 2em;
+        color: $bullet-color-two; 
+        }
+
+    li:nth-of-type(3) {
+        font-size: 2em;
+        color: $bullet-color-three; 
+        }    
+        
     li:hover {
     cursor: pointer;
+    background-color: $highlight-color;
     }       
 }
 
+.unhighlight li:hover {
+    background-color: $myfont-color;
+    transition: 0ms;
+}
 
 .subList {
     display: none;
+}
+
+.backGround {
+    display: block;
 }

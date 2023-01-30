@@ -14,23 +14,17 @@
 
 nav {
   height: 100%;
+  min-height: 800px;
   width: 250px;
   max-width: 350px;
   margin-left: 35px;
   color: #1C1C1E;
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
-.navList {
+.navList ul {
   list-style-type: none;
-}
-.navList li:hover {
-  background-color: #EFE6E3;
-  transition: 0.3s;
-}
-.navList li:hover .fa-circle-chevron-down {
-  display: block;
-  cursor: pointer;
 }
 .navList li {
   display: flex;
@@ -45,13 +39,24 @@ nav {
 .navList li .fa-circle-chevron-down {
   display: none;
 }
-.navList :nth-child(5) {
+.navList li span:hover {
+  cursor: pointer;
+}
+.navList li:hover {
+  background-color: #EFE6E3;
+  transition: 0.3s;
+}
+.navList li:hover .fa-circle-chevron-down {
+  display: block;
+  cursor: pointer;
+}
+.navList :nth-child(9) {
   position: absolute;
-  bottom: 8%;
+  top: 810px;
   display: flex;
   align-items: center;
 }
-.navList :nth-child(5) i {
+.navList :nth-child(9) i {
   font-size: 0.8em;
   width: 40px;
   height: 40px;
@@ -62,28 +67,57 @@ nav {
   justify-content: center;
   align-items: center;
 }
+.navList :nth-child(9) :hover {
+  cursor: pointer;
+}
 
-#resourceDrop li {
+.subMenu li {
   background-color: #FBF7F4;
   margin-left: 40px;
   display: list-item;
-  list-style: square;
+  list-style: square inside;
 }
-#resourceDrop li::before {
+.subMenu li span {
+  font-size: 0.5em;
+  color: #1C1C1E;
+  position: relative;
+  top: -5px;
+  left: -25px;
+}
+.subMenu li:nth-of-type(1) {
   font-size: 2em;
-  color: #8a7f3f;
+  color: #EAC2C6;
 }
-#resourceDrop li:hover {
+.subMenu li:nth-of-type(2) {
+  font-size: 2em;
+  color: #FABC8C;
+}
+.subMenu li:nth-of-type(3) {
+  font-size: 2em;
+  color: #49608A;
+}
+.subMenu li:hover {
   cursor: pointer;
+  background-color: #EFE6E3;
+}
+
+.unhighlight li:hover {
+  background-color: #1C1C1E;
+  transition: 0ms;
 }
 
 .subList {
   display: none;
 }
 
+.backGround {
+  display: block;
+}
+
 .mainContainer {
   width: 90%;
   height: 85%;
+  min-height: 800px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -112,6 +146,6 @@ nav {
   padding: 0;
 }
 
-.navList li:nth-of-type(1) {
+.dashboard {
   background-color: #EFE6E3;
 }/*# sourceMappingURL=style.css.map */
