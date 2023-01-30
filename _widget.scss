@@ -1,21 +1,38 @@
 //How can I make this more efficient and organized?
 @use 'variables' as *;
 
+@mixin display-flex {
+    display: flex;
+}
+
+@mixin widget-box($image, $width) {
+    background-image: $image;
+    background-size: cover;
+    @include display-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0 2rem;
+    height: 35%;
+    width: $width;
+    color: white;
+}
+
 .mainWidget {
     font-family: $font-theme;
     height: 95%;
 }
 
 .wrapper {
-    row-gap: 1rem;;
+    row-gap: 1rem;
     padding: 3rem;
-    display: flex;
+    @include display-flex;
     flex-direction: column;   
     height: 100%;
 }
 
 .todaySection {
-    display: flex;
+    @include display-flex;
     justify-content: space-between;
 }
 
@@ -43,13 +60,13 @@
     height: 50px;
     background-color: beige;
     border-radius: 50%;
-    display: flex;
+    @include display-flex;
     justify-content: center;
     align-items: center;
 }
 
 .subSection2 {
-    display: flex;
+    @include display-flex;
     justify-content: space-between;
 }
 
@@ -61,34 +78,25 @@
 .widget-wrapper {
     height: 100%;
 }
+
 .widget-1 {
-    background-image: url("/images/background-widget-1.jpg");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding: 0 2rem;
-    height: 35%;
+    @include widget-box(url("/images/black_unis.0.jpeg"), 95);
 }
 
 .widget-2 {
-    background-image: url("/images/background-widget-1.jpg");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding: 0 2rem;
-    width: 50%;
-    height: 35%;
+    @include widget-box(url("/images/background-widget-1.jpg"), 50%);
+}
+
+.widget-3 {
+    @include widget-box(url("/images/background-widget-2.jpg"), 50%);
 }
 
 h4 {
     padding-bottom: 1rem;
 }
+
 .widget-2-wrapper {
-    display: flex;
+    @include display-flex;
     column-gap: 1rem;
     padding-top: 1rem;
     align-items: stretch;

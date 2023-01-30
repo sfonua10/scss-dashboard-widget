@@ -214,7 +214,7 @@ nav {
 }
 
 .widget-1 {
-  background-image: url("/images/background-widget-1.jpg");
+  background-image: url("/images/black_unis.0.jpeg");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -222,6 +222,8 @@ nav {
   justify-content: space-around;
   padding: 0 2rem;
   height: 35%;
+  width: 95;
+  color: white;
 }
 
 .widget-2 {
@@ -232,8 +234,22 @@ nav {
   align-items: flex-start;
   justify-content: space-around;
   padding: 0 2rem;
-  width: 50%;
   height: 35%;
+  width: 50%;
+  color: white;
+}
+
+.widget-3 {
+  background-image: url("/images/background-widget-2.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 0 2rem;
+  height: 35%;
+  width: 50%;
+  color: white;
 }
 
 h4 {
