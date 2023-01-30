@@ -225,6 +225,24 @@ nav {
   width: 95;
   color: white;
 }
+.widget-1 h4 {
+  font-size: 2em;
+}
+.widget-1 span {
+  display: flex;
+  align-items: center;
+}
+.widget-1 i {
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #FBF7F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .widget-2 {
   background-image: url("/images/background-widget-1.jpg");
@@ -234,9 +252,27 @@ nav {
   align-items: flex-start;
   justify-content: space-around;
   padding: 0 2rem;
-  height: 35%;
+  height: 50%;
   width: 50%;
   color: white;
+}
+.widget-2 h4 {
+  font-size: 2em;
+}
+.widget-2 span {
+  display: flex;
+  align-items: center;
+}
+.widget-2 i {
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #FBF7F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .widget-3 {
@@ -247,9 +283,27 @@ nav {
   align-items: flex-start;
   justify-content: space-around;
   padding: 0 2rem;
-  height: 35%;
+  height: 50%;
   width: 50%;
   color: white;
+}
+.widget-3 h4 {
+  font-size: 2em;
+}
+.widget-3 span {
+  display: flex;
+  align-items: center;
+}
+.widget-3 i {
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #FBF7F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h4 {
