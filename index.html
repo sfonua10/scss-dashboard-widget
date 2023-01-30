@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="import" href="html/main-widget.html">
 </head>
+
 <body>
     <div class="mainContainer">
         <nav>
@@ -20,7 +23,7 @@
                     </div>
                     <i class="fa-solid fa-circle-chevron-down" onclick="dashboardMenu()"></i>
                 </li>
-                <div>    
+                <div>
                     <ul id="dashDrop" class="subList subMenu">
                         <li><span>Today's Plan</span></li>
                         <li><span>Weekly Report</span></li>
@@ -34,16 +37,24 @@
                     <i class="fa-solid fa-circle-chevron-down" onclick="educationMenu()"></i>
                 </li>
                 <div>
-                    <ul id="eduDrop" class="subList subMenu">
+                    <!-- <ul id="eduDrop" class="subList subMenu">
                         <li><span>Canvas</span></li>
                         <li><span>Pluralsight</span></li>
                         <li><span>Mtec</span></li>
-                    </ul>
+                    </ul> -->
+                    </li>
+                    <!-- <li><i class="fa-solid fa-gear"></i><span>Settings</span>
+                        <ul class="subList">
+                            <li class="hidden"></li>
+                            <li class="hidden"></li>
+                            <li class="hidden"></li>
+                        </ul>
+                    </li> -->
                 </div>
                 <li id="resourceTab">
                     <div>
-                        <i class="fa-solid fa-lines-leaning"></i><span>Resources</span> 
-                    </div>  
+                        <i class="fa-solid fa-lines-leaning"></i><span>Resources</span>
+                    </div>
                     <i class="fa-solid fa-circle-chevron-down" onclick="resourceMenu()"></i>
                 </li>
                 <div>
@@ -52,14 +63,14 @@
                         <li><span>DNA synthesis</span></li>
                         <li><span>Events</span></li>
                     </ul>
-                </div>     
+                </div>
                 <li>
                     <div>
                         <i class="fa-solid fa-gear"></i><span>Settings</span>
                     </div>
                     <i class="fa-solid fa-circle-chevron-down" onclick="settingsMenu()"></i>
-                </li> 
-                <div>    
+                </li>
+                <div>
                     <ul id="settingsDrop" class="subList subMenu">
                         <li><span>Profile</span></li>
                         <li><span>Appearance</span></li>
@@ -69,12 +80,66 @@
                 <li><i class="fa-solid fa-right-from-bracket"></i><span>Log out</span>
             </ul>
         </nav>
-    </div>    
+        <section class="mainWidget">
+            <div class="wrapper">
+                <div class="todaySection">
+                    <div>
+                        <h1 class="H1">Today's Plan</h1>
+                        <p class="DateText">June 14th, 2022</p>
+                    </div>
+                    <div>
+
+                        <button class="add"><i class="fa-plus h-8"></i></button>
+                    </div>
+                </div>
+                <div class="section2">
+                    <h1 class="text1">Sustainable development goals and health innovation</h1>
+                    <div class="subSection2">
+                        <div>
+                            <div class="avatar">+5</div>
+                        </div>
+                        <div class="teamSection">
+                            <h3>Medi Team meeting</h3>
+                            <p>13:30 - 14:50</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="widget-wrapper">
+                    <div class="widget-1">
+                        <div>
+                            <h4>
+                                Weekly report
+                            </h4>
+                            <p>Track your performance</p>
+                        </div>
+                        <button>View Report</button>
+                    </div>
+                    <div class="widget-2-wrapper">
+
+                        <div class="widget-2">
+                            <h4>
+                                Study 78X
+                            </h4>
+                            <span>ICON</span>
+                            <p>Track your performance</p>
+                        </div>
+                        <div class="widget-2">
+                            <h4>
+                                Analyses
+                            </h4>
+                            <span>ICON</span>
+                            <p>Track your performance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <script src="https://kit.fontawesome.com/8d9517372c.js" crossorigin="anonymous"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
-  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
