@@ -155,6 +155,7 @@ nav {
 .mainWidget {
   font-family: "Roboto", sans-serif;
   height: 95%;
+  margin-left: 1.5rem;
 }
 
 .wrapper {
