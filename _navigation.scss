@@ -1,17 +1,18 @@
 @use 'variables' as *;
 
-@mixin nav-theme($font-theme, $text-size) {
-    font-family: $font-theme;
-    font-size: $text-size;
-    padding: 10px 80px 10px 10px;
-    margin: 8px;
-    padding-left: 20px;
-}
+// @mixin nav-theme($font-theme, $text-size) {
+//     font-family: $font-theme;
+//     font-size: $text-size;
+//     padding: 10px 0 10px 10px;
+//     width: 100%;
+//     margin: 8px;
+//     padding-left: 20px;
+// }
 
-@keyframes changeColor {
-    from {background-color: $main-background}
-    to {background-color: #EFE6E3}
-}
+// @keyframes changeColor {
+//     from {background-color: $main-background}
+//     to {background-color: #EFE6E3}
+// }
 
 .logo {
     display: flex;
@@ -26,31 +27,50 @@
 
 nav {
     height: 100%;
-    max-width: 320px;
+    min-height: 800px;
+    width: 250px;
+    max-width: 350px;
     margin-left: 35px;
     color: $myfont-color;
+    font-family: $font-theme;
+    font-weight: bold;
 }
 
 .navList {
-    list-style-type: none;
-    span:hover {
-        cursor: pointer;
+    ul {
+        list-style-type: none;
     }
-
-    li:hover {
-        animation-name: changeColor;
-        animation-duration: 1s;
-    }
+    
     li {
-        @include nav-theme($font-theme, $text-size);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 14px;
+        margin: 18px 0;
         span {
             margin-left: 12px;
         }
+        .fa-circle-chevron-down {
+           display: none;   
+        }
+
+        span:hover {
+            cursor: pointer;
+        }
     }
 
-    :nth-child(5) {
+    li:hover {
+        background-color: $highlight-color;
+        transition: .3s;
+        .fa-circle-chevron-down {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    :nth-child(9) {
         position: absolute;
-        bottom: 8%;
+        top: 810px;
         display: flex;
         align-items: center;
         i {
@@ -64,9 +84,61 @@ nav {
             justify-content: center;
             align-items: center;
         }
+        :hover {
+            cursor: pointer;
+        }
     }
+
+}
+
+.subMenu {
+    
+    li {
+    background-color: $main-background;
+    margin-left: 40px;
+    display: list-item;
+    list-style: square inside; 
+
+        span {
+            font-size: .5em;
+            color: $myfont-color;
+            position: relative;
+            top: -5px;
+            left: -25px; 
+        }
+
+    }
+
+    li:nth-of-type(1) {
+    font-size: 2em;
+    color: $bullet-color-one; 
+    }
+
+    li:nth-of-type(2) {
+        font-size: 2em;
+        color: $bullet-color-two; 
+        }
+
+    li:nth-of-type(3) {
+        font-size: 2em;
+        color: $bullet-color-three; 
+        }    
+        
+    li:hover {
+    cursor: pointer;
+    background-color: $highlight-color;
+    }       
+}
+
+.unhighlight li:hover {
+    background-color: $myfont-color;
+    transition: 0ms;
 }
 
 .subList {
     display: none;
+}
+
+.backGround {
+    display: block;
 }
